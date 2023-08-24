@@ -63,7 +63,7 @@ def get_input():
     reverse_pressed = 0
 
     # Map axes
-    left_thumb_x = 0
+    left_thumb_x = 2
     left_trigger = 4
     right_trigger = 5
 
@@ -228,10 +228,15 @@ def show_image():
     global send_commands
     global smoothed_angle
     global stop_condition
+    global disable_camera_display
+    global disable_steering_display
 
     # Load classifiers
 
+
     while send_commands == 1:
+
+        draw_image = Image.fromarray(image)
 
         # Note: colours are in BGR format for PIL text
         # Set up capturing status text
@@ -605,4 +610,3 @@ print("")
 
 # Start thread (Thread 1)
 Thread(target=video_stream).start()
-
