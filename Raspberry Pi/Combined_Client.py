@@ -54,7 +54,7 @@ def VideoStream():
     # Set up command client
     while arduino_connected == 0:
         try:
-            ArduinoPort = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
+            ArduinoPort = serial.Serial('/dev/ttyAMA0', 115200, timeout=1)
             arduino_connected = 1
         except:
             arduino_connected = 0
