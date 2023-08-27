@@ -476,11 +476,7 @@ def video_stream():
                 command_client.send(control_message.encode())
                 time_interval = int(1000 * (time.time() - last_send_time))
                 time_elapsed = int(time.time() - start_time)
-                print("Time: " + str(time_elapsed).zfill(
-                    4) + " | Sending command: " + control_message + " | Transmission interval: " + str(
-                    time_interval).zfill(3) + " ms" + " | Image Acquisition: " + str(image_time).zfill(
-                    3) + " ms" + " | Neural Network: " + str(neural_time).zfill(2) + " ms" + " | Frame rate: " + str(
-                    1000 / time_interval) + " fps")
+                print("Time: " + str(time_elapsed).zfill(4) + " | Sending command: " + control_message + " | Transmission interval: " + str(time_interval).zfill(3) + " ms" + " | Image Acquisition: " + str(image_time).zfill(3) + " ms" + " | Neural Network: " + str(neural_time).zfill(2) + " ms" + " | Frame rate: " + str(1000 / time_interval) + " fps")
                 last_send_time = time.time()
 
                 # Stop if "B" is pressed on gamepad
