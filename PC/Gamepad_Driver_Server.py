@@ -1,5 +1,6 @@
 import socket
 import pygame
+from pygame.locals import *
 from threading import Thread
 from numpy import array
 import cv2
@@ -63,7 +64,7 @@ def get_input():
     reverse_pressed = 0
 
     # Map axes
-    left_thumb_x = 2
+    left_thumb_x = 0
     left_trigger = 4
     right_trigger = 5
 
