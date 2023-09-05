@@ -71,6 +71,7 @@ def get_input():
     # Get gamepad input while script is still sending commands to car
     while send_commands == 1:
         # Update gamepad conditions
+        pygame.joystick.init()
         pygame.event.pump()
 
         # Get inputs from appropriate axes
